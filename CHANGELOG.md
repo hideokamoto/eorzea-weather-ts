@@ -1,20 +1,50 @@
-<a name="0.2.0"></a>
-# [0.2.0](https://github.com/hideokamoto/eoruzea-weather-ts/compare/v0.1.0...v0.2.0) (2019-09-08)
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/hideokamoto/eorzea-weather-ts/compare/v1.0.0...v1.1.0) (2019-09-08)
 
 
 ### Features
 
-* add a new function to search weather ([a00454d](https://github.com/hideokamoto/eoruzea-weather-ts/commit/a00454d))
+* export as defult ([ebf0e3d](https://github.com/hideokamoto/eorzea-weather-ts/commit/ebf0e3d))
+
+
+
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/hideokamoto/eorzea-weather-ts/compare/v0.2.0...v1.0.0) (2019-09-08)
+
+
+### Bug Fixes
+
+* typo ([7aaaae0](https://github.com/hideokamoto/eorzea-weather-ts/commit/7aaaae0))
+
+
+### Features
+
+* eorzeaClass create ([45f9f33](https://github.com/hideokamoto/eorzea-weather-ts/commit/45f9f33))
+
+
+### BREAKING CHANGES
+
+* All Function will be moved to a class method.
+
+
+
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/hideokamoto/eorzea-weather-ts/compare/v0.1.0...v0.2.0) (2019-09-08)
+
+
+### Features
+
+* add a new function to search weather ([a00454d](https://github.com/hideokamoto/eorzea-weather-ts/commit/a00454d))
 
 
 
 <a name="0.1.0"></a>
-# [0.1.0](https://github.com/hideokamoto/eoruzea-weather-ts/compare/0901053...v0.1.0) (2019-09-08)
+# [0.1.0](https://github.com/hideokamoto/eorzea-weather-ts/compare/0901053...v0.1.0) (2019-09-08)
 
 
 ### Features
 
-* init a packages ([0901053](https://github.com/hideokamoto/eoruzea-weather-ts/commit/0901053))
+* init a packages ([0901053](https://github.com/hideokamoto/eorzea-weather-ts/commit/0901053))
 
 
 
