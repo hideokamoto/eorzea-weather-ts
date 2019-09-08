@@ -58,8 +58,8 @@ export interface WeatherReport {
 
 /**
  * Get the regions weathers
- * @param regionName
- * @param date
+ * @param {string} regionName region name like Thanalan
+ * @param {Date} date
  * @param {Locale = 'en'} locale  言語： ja or en
  * @example
  * ```
@@ -93,4 +93,23 @@ export const getWeatherByRegion = (regionName: string, date = new Date(), loc: L
     })
   })
   return results
+}
+
+/**
+ *
+ * @param {string} regionOrZone region name like Thanalan, or zone name like  Ul'dah
+ * @param {Date} date
+ * @param {Locale = 'en'} locale  言語： ja or en
+ */
+export const getWeatherBySearchQuery = (regionOrZone: string, date = new Date(), loc: Locale = 'en') => {
+  try {
+    return getWeatherByRegion(regionOrZone, date, loc)
+  } catch (e) {
+    const locale = getZoneByName(regionOrZone, loc)
+    return [{
+      name: regionOrZone,
+      weather: EorzeaWeather.getWeather(locale, date),
+      date
+    }]
+  }
 }

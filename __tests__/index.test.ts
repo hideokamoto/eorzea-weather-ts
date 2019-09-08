@@ -3,7 +3,8 @@ import {
   getZoneByName,
   getWeatherByZone,
   getRegionZones,
-  getWeatherByRegion
+  getWeatherByRegion,
+  getWeatherBySearchQuery
 } from '../libs/index'
 
 describe('getWeatherByRegion()', () => {
@@ -86,5 +87,47 @@ describe('getZoneByName()', () => {
   })
   it('shoudl return code name', () => {
     expect(getZoneByName("The Rak'tika Greatwood")).toEqual('theRaktikaGreatwood')
+  })
+})
+
+describe('getWeatherBySearchQuery()', () => {
+  const date = moment('2019-12-01T12:00:00Z').toDate()
+  it('should throw error', () => {
+    expect(
+      () => getWeatherBySearchQuery('John', date)
+    ).toThrow()
+  })
+  it('should return the region weathers', () => {
+    expect(getWeatherBySearchQuery("The Rak'tika Greatwood", date))
+      .toEqual([{
+        date: expect.any(Date),
+        name: "The Rak'tika Greatwood",
+        weather: 'Clouds'
+      }])
+  })
+  it('should return the zone weather', () => {
+    expect(getWeatherBySearchQuery('Thanalan', date, 'en'))
+      .toMatchObject([{
+        date: expect.any(Date),
+        name: "Ul'dah",
+        weather: 'Fog'
+      }, {
+        date: expect.any(Date),
+        name: 'Central Thanalan',
+        weather: 'Fog'
+      }, {
+        date: expect.any(Date),
+        name: 'Eastern Thanalan',
+        weather: 'Showers'
+      }, {
+        date: expect.any(Date),
+        name: 'Northern Thanalan',
+        weather: 'Fog'
+      }, {
+        date: expect.any(Date),
+        name: 'Western Thanalan',
+        weather: 'Fog'
+      }
+      ])
   })
 })
