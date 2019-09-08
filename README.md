@@ -1,6 +1,6 @@
-# TypeScript Package template
+# Eoruzea weather for TypeScript
 
-GitHub Template repository to create a npm package by using TypeScript.
+Simply utility functions to call the Eoruzea weather package.
 
 ## Prepare
 
@@ -43,8 +43,8 @@ $ git commit -m "<type>[optional scope]: <description>
 
 ```bash
 // clone
-$ git clone git@github.com:hideokamoto/MY_REPO_NAME.git
-$ cd MY_REPO_NAME
+$ git clone git@github.com:hideokamoto/eoruzea-weather-ts.git
+$ cd eoruzea-weather-ts
 
 // setup
 $ yarn
