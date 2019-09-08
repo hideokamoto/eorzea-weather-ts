@@ -120,3 +120,5 @@ export class EorzeaWeather {
     }
   }
 }
+
+export default EorzeaWeather

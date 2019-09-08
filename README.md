@@ -2,6 +2,52 @@
 
 Simply utility functions to call the eorzea weather package.
 
+## Usage
+
+
+```typescript
+import EorzeaWeather from 'eorzea-weather-ts'
+const client = new EorzeaWeather()
+
+// Regional Search
+client.getWeatherBySearchQuery('Thanalan', new Date(), 'en')
+[
+  {
+      "name": "Ul'dah",
+      "weather": "Clear Skies",
+      "date": "2019-09-08T07:22:34.438Z"
+  },
+  {
+      "name": "Central Thanalan",
+      "weather": "Clear Skies",
+      "date": "2019-09-08T07:22:34.438Z"
+  },
+  {
+      "name": "Eastern Thanalan",
+      "weather": "Clear Skies",
+      "date": "2019-09-08T07:22:34.438Z"
+  },
+  {
+      "name": "Northern Thanalan",
+      "weather": "Clouds",
+      "date": "2019-09-08T07:22:34.438Z"
+  },
+  {
+      "name": "Western Thanalan",
+      "weather": "Clear Skies",
+      "date": "2019-09-08T07:22:34.438Z"
+  }
+]
+
+// Zone search
+client.getWeatherBySearchQuery("The Rak'tika Greatwood", date))
+[{
+  "date": "2019-09-08T07:22:34.438Z"
+  "name": "The Rak'tika Greatwood",
+  "weather": 'Clouds'
+}]
+```
+
 ## Prepare
 
 ```
@@ -18,11 +64,6 @@ $ yarn
 or
 $ npm install
 ```
-
-### GitHub Personal Access Token Scope
-
-If the project is private -> `repo`
-If the project is public -> `public_repo`
 
 ## Commit message rule
 
