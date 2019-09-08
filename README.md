@@ -1,6 +1,6 @@
-# Eoruzea weather for TypeScript
+# eorzea weather for TypeScript
 
-Simply utility functions to call the Eoruzea weather package.
+Simply utility functions to call the eorzea weather package.
 
 ## Prepare
 
@@ -43,8 +43,8 @@ $ git commit -m "<type>[optional scope]: <description>
 
 ```bash
 // clone
-$ git clone git@github.com:hideokamoto/eoruzea-weather-ts.git
-$ cd eoruzea-weather-ts
+$ git clone git@github.com:hideokamoto/eorzea-weather-ts.git
+$ cd eorzea-weather-ts
 
 // setup
 $ yarn

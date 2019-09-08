@@ -1,5 +1,5 @@
 {
-  "name": "eoruzea-weather-ts",
+  "name": "eorzea-weather-ts",
   "version": "0.2.0",
   "description": "",
   "main": "dist/index.js",
@@ -21,11 +21,11 @@
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/hideokamoto/eoruzea-weather-ts/issues"
+    "url": "https://github.com/hideokamoto/eorzea-weather-ts/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hideokamoto/eoruzea-weather-ts.git"
+    "url": "https://github.com/hideokamoto/eorzea-weather-ts.git"
   },
   "author": "Hidetaka Okamoto <info@wp-kyoto.net> (https://wp-kyoto.net)",
   "license": "MIT",
