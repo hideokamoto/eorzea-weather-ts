@@ -87,6 +87,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_index_.html#getregionzones" class="tsd-kind-icon">get<wbr>Region<wbr>Zones</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_index_.html#getweatherbyregion" class="tsd-kind-icon">get<wbr>Weather<wbr>ByRegion</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_index_.html#getweatherbysearchquery" class="tsd-kind-icon">get<wbr>Weather<wbr>BySearch<wbr>Query</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_index_.html#getweatherbyzone" class="tsd-kind-icon">get<wbr>Weather<wbr>ByZone</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_index_.html#getzonebyname" class="tsd-kind-icon">get<wbr>Zone<wbr>ByName</a></li>
 							</ul>
@@ -102,7 +103,7 @@
 					<div class="tsd-signature tsd-kind-icon">Eorzea<wbr>Weather<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&#x27;eorzea-weather&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/0901053/libs/index.ts#L10">index.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/a00454d/libs/index.ts#L10">index.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -119,7 +120,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/0901053/libs/index.ts#L46">index.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/a00454d/libs/index.ts#L46">index.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -155,7 +156,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/0901053/libs/index.ts#L83">index.ts:83</a></li>
+									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/a00454d/libs/index.ts#L83">index.ts:83</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -167,6 +168,11 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>regionName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>region name like Thanalan</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> date: <span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> =&nbsp;new Date()</span></h5>
@@ -180,6 +186,40 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="getweatherbysearchquery" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Weather<wbr>BySearch<wbr>Query</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Weather<wbr>BySearch<wbr>Query<span class="tsd-signature-symbol">(</span>regionOrZone<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, date<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Date</span>, loc<span class="tsd-signature-symbol">?: </span><a href="_resources_model_.html#locale" class="tsd-signature-type">Locale</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/a00454d/libs/index.ts#L104">index.ts:104</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>regionOrZone: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>region name like Thanalan, or zone name like  Ul&#39;dah</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> date: <span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> =&nbsp;new Date()</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> loc: <a href="_resources_model_.html#locale" class="tsd-signature-type">Locale</a><span class="tsd-signature-symbol"> =&nbsp;&quot;en&quot;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="getweatherbyzone" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Weather<wbr>ByZone</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
@@ -189,7 +229,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/0901053/libs/index.ts#L37">index.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/a00454d/libs/index.ts#L37">index.ts:37</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -230,7 +270,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/0901053/libs/index.ts#L21">index.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/hideokamoto/eoruzea-weather-ts/blob/a00454d/libs/index.ts#L21">index.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -294,6 +334,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_index_.html#getweatherbyregion" class="tsd-kind-icon">get<wbr>Weather<wbr>ByRegion</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_index_.html#getweatherbysearchquery" class="tsd-kind-icon">get<wbr>Weather<wbr>BySearch<wbr>Query</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_index_.html#getweatherbyzone" class="tsd-kind-icon">get<wbr>Weather<wbr>ByZone</a>
