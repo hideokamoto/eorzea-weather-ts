@@ -68,6 +68,49 @@
 					<h1>eorzea weather for TypeScript</h1>
 				</a>
 				<p>Simply utility functions to call the eorzea weather package.</p>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> EorzeaWeather <span class="hljs-keyword">from</span> <span class="hljs-string">'eorzea-weather-ts'</span>
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> EorzeaWeather()
+
+<span class="hljs-comment">// Regional Search</span>
+client.getWeatherBySearchQuery(<span class="hljs-string">'Thanalan'</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), <span class="hljs-string">'en'</span>)
+[
+  {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"Ul'dah"</span>,
+      <span class="hljs-string">"weather"</span>: <span class="hljs-string">"Clear Skies"</span>,
+      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2019-09-08T07:22:34.438Z"</span>
+  },
+  {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"Central Thanalan"</span>,
+      <span class="hljs-string">"weather"</span>: <span class="hljs-string">"Clear Skies"</span>,
+      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2019-09-08T07:22:34.438Z"</span>
+  },
+  {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"Eastern Thanalan"</span>,
+      <span class="hljs-string">"weather"</span>: <span class="hljs-string">"Clear Skies"</span>,
+      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2019-09-08T07:22:34.438Z"</span>
+  },
+  {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"Northern Thanalan"</span>,
+      <span class="hljs-string">"weather"</span>: <span class="hljs-string">"Clouds"</span>,
+      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2019-09-08T07:22:34.438Z"</span>
+  },
+  {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"Western Thanalan"</span>,
+      <span class="hljs-string">"weather"</span>: <span class="hljs-string">"Clear Skies"</span>,
+      <span class="hljs-string">"date"</span>: <span class="hljs-string">"2019-09-08T07:22:34.438Z"</span>
+  }
+]
+
+<span class="hljs-comment">// Zone search</span>
+client.getWeatherBySearchQuery(<span class="hljs-string">"The Rak'tika Greatwood"</span>, date))
+[{
+  <span class="hljs-string">"date"</span>: <span class="hljs-string">"2019-09-08T07:22:34.438Z"</span>
+  <span class="hljs-string">"name"</span>: <span class="hljs-string">"The Rak'tika Greatwood"</span>,
+  <span class="hljs-string">"weather"</span>: <span class="hljs-string">'Clouds'</span>
+}]</code></pre>
 				<a href="#prepare" id="prepare" style="color: inherit; text-decoration: none;">
 					<h2>Prepare</h2>
 				</a>
@@ -83,11 +126,6 @@ export CONVENTIONAL_GITHUB_RELEASER_TOKEN=PUT_YOUR_GITHUB_ACCESS_TOKEN
 <span class="hljs-symbol">$</span> yarn
 <span class="hljs-keyword">or</span>
 <span class="hljs-symbol">$</span> npm install</code></pre>
-				<a href="#github-personal-access-token-scope" id="github-personal-access-token-scope" style="color: inherit; text-decoration: none;">
-					<h3>GitHub Personal Access Token Scope</h3>
-				</a>
-				<p>If the project is private -&gt; <code>repo</code>
-				If the project is public -&gt; <code>public_repo</code></p>
 				<a href="#commit-message-rule" id="commit-message-rule" style="color: inherit; text-decoration: none;">
 					<h2>Commit message rule</h2>
 				</a>
