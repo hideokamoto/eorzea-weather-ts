@@ -1,20 +1,16 @@
 import moment from 'moment'
 import {
-  getZoneByName,
-  getWeatherByZone,
-  getRegionZones,
-  getWeatherByRegion,
-  getWeatherBySearchQuery
+  EorzeaWeather
 } from '../libs/index'
-
+const client = new EorzeaWeather()
 describe('getWeatherByRegion()', () => {
   it('should throw error when given invalid name', () => {
     expect(
-      () => getWeatherByRegion('John')
+      () => client.getWeatherByRegion('John')
     ).toThrow()
   })
   it('should list weathers', () => {
-    const weathers = getWeatherByRegion('Thanalan', moment('2019-12-01T12:00:00Z').toDate())
+    const weathers = client.getWeatherByRegion('Thanalan', moment('2019-12-01T12:00:00Z').toDate())
     expect(weathers).toMatchObject([{
       date: expect.any(Date),
       name: "Ul'dah",
@@ -41,15 +37,15 @@ describe('getWeatherByRegion()', () => {
 
 describe('getWeatherByZone()', () => {
   it('Should return the zone weather.', () => {
-    const zone = getZoneByName("The Rak'tika Greatwood")
-    const weather = getWeatherByZone(zone, moment('2019-12-01T12:00:00Z').toDate())
+    const zone = client.getZoneByName("The Rak'tika Greatwood")
+    const weather = client.getWeatherByZone(zone, moment('2019-12-01T12:00:00Z').toDate())
     expect(weather).toEqual('Clouds')
   })
 })
 
 describe('getRegionZones()', () => {
   it('should list zones by region name[en]', () => {
-    expect(getRegionZones('Norvrandt', 'en')).toEqual({
+    expect(client.getRegionZones('Norvrandt', 'en')).toEqual({
       name: 'Norvrandt',
       zones: {
         amhAraeng: 'Amh Araeng',
@@ -64,7 +60,7 @@ describe('getRegionZones()', () => {
     })
   })
   it('should list zones by region name[ja]', () => {
-    expect(getRegionZones('ラノシア', 'ja')).toEqual({
+    expect(client.getRegionZones('ラノシア', 'ja')).toEqual({
       name: 'ラノシア',
       zones: {
         easternLaNoscea: '東ラノシア',
@@ -82,11 +78,11 @@ describe('getRegionZones()', () => {
 describe('getZoneByName()', () => {
   it('should throw error when given invalid name', () => {
     expect(
-      () => getZoneByName('John')
+      () => client.getZoneByName('John')
     ).toThrow()
   })
   it('shoudl return code name', () => {
-    expect(getZoneByName("The Rak'tika Greatwood")).toEqual('theRaktikaGreatwood')
+    expect(client.getZoneByName("The Rak'tika Greatwood")).toEqual('theRaktikaGreatwood')
   })
 })
 
@@ -94,11 +90,11 @@ describe('getWeatherBySearchQuery()', () => {
   const date = moment('2019-12-01T12:00:00Z').toDate()
   it('should throw error', () => {
     expect(
-      () => getWeatherBySearchQuery('John', date)
+      () => client.getWeatherBySearchQuery('John', date)
     ).toThrow()
   })
   it('should return the region weathers', () => {
-    expect(getWeatherBySearchQuery("The Rak'tika Greatwood", date))
+    expect(client.getWeatherBySearchQuery("The Rak'tika Greatwood", date))
       .toEqual([{
         date: expect.any(Date),
         name: "The Rak'tika Greatwood",
@@ -106,7 +102,7 @@ describe('getWeatherBySearchQuery()', () => {
       }])
   })
   it('should return the zone weather', () => {
-    expect(getWeatherBySearchQuery('Thanalan', date, 'en'))
+    expect(client.getWeatherBySearchQuery('Thanalan', date, 'en'))
       .toMatchObject([{
         date: expect.any(Date),
         name: "Ul'dah",
