@@ -2,6 +2,13 @@ import moment from 'moment'
 import {
   EorzeaWeather
 } from '../libs/index'
+import { translateWeather } from '../libs/resources/ja'
+describe('translateWeather()', () => {
+  it('test', () => {
+    expect(translateWeather('Fair Skies')).toEqual('晴れ')
+  })
+})
+
 const client = new EorzeaWeather()
 describe('getWeatherByRegion()', () => {
   it('should throw error when given invalid name', () => {
@@ -123,6 +130,31 @@ describe('getWeatherBySearchQuery()', () => {
         date: expect.any(Date),
         name: 'Western Thanalan',
         weather: 'Fog'
+      }
+      ])
+  })
+  it('should return the zone weather　JP', () => {
+    expect(client.getWeatherBySearchQuery('ザナラーン', date, 'ja'))
+      .toMatchObject([{
+        date: expect.any(Date),
+        name: 'ウルダハ',
+        weather: '霧'
+      }, {
+        date: expect.any(Date),
+        name: '中央ザナラーン',
+        weather: '霧'
+      }, {
+        date: expect.any(Date),
+        name: '東ザナラーン',
+        weather: '暴雨'
+      }, {
+        date: expect.any(Date),
+        name: '北ザナラーン',
+        weather: '霧'
+      }, {
+        date: expect.any(Date),
+        name: '西ザナラーン',
+        weather: '霧'
       }
       ])
   })

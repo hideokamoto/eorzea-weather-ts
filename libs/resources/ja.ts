@@ -4,6 +4,9 @@ import {
   Zones,
   Regions
 } from './model'
+import {
+  weathers as ENWeathers
+} from './en'
 
 export const weathers: Weathers = {
   blizzards: '吹雪',
@@ -168,8 +171,24 @@ export const zones: Zones = {
   westernThanalan: '西ザナラーン',
   yanxia: 'ヤンサ'
 }
+
+/**
+ * 日本語に翻訳する
+ * @param weather
+ */
+export const translateWeather = (weather: string): string => {
+  const target = Object.keys(ENWeathers).find(key => {
+    const enWeather = ENWeathers[key]
+    return enWeather === weather
+  })
+  if (!target) throw new Error(`Invalid weather name: ${weather}`)
+  const jpWeather = weathers[target]
+  if (!jpWeather) throw new Error(`Invalid weather name: ${weather}`)
+  return jpWeather
+}
 export default {
   regions,
+  translateWeather,
   weathers,
   zones
 }

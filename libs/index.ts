@@ -3,6 +3,9 @@ import {
   getZones
 } from './resources/index'
 import {
+  translateWeather
+} from './resources/ja'
+import {
   Region,
   Locale
 } from './resources/model'
@@ -46,8 +49,9 @@ export class EorzeaWeather {
    * @param {string} zoneName Zone name: Thanalan / 低地ラノシア / etc...
    * @param {Date} date Target date time
    */
-  public getWeatherByZone (zoneName: string, date = new Date()): string {
-    return this.getWeather(zoneName, date)
+  public getWeatherByZone (zoneName: string, date = new Date(), loc: Locale = 'en'): string {
+    const weather = this.getWeather(zoneName, date)
+    return loc === 'ja' ? translateWeather(weather) : weather
   }
 
   /**
@@ -92,9 +96,10 @@ export class EorzeaWeather {
     Object.keys(target.zones).forEach(key => {
       const zoneName = target.zones[key]
       const locale = this.getZoneByName(zoneName, loc)
+      const weather = this.getWeather(locale, date)
       results.push({
         name: zoneName,
-        weather: this.getWeather(locale, date),
+        weather: loc === 'ja' ? translateWeather(weather) : weather,
         date
       })
     })
@@ -112,9 +117,10 @@ export class EorzeaWeather {
       return this.getWeatherByRegion(regionOrZone, date, loc)
     } catch (e) {
       const locale = this.getZoneByName(regionOrZone, loc)
+      const weather = this.getWeather(locale, date)
       return [{
         name: regionOrZone,
-        weather: this.getWeather(locale, date),
+        weather: loc === 'ja' ? translateWeather(weather) : weather,
         date
       }]
     }
