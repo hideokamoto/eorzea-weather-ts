@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/hideokamoto/eorzea-weather-ts/compare/v1.1.0...v1.2.0) (2019-10-08)
+
+
+### Features
+
+* translate weather name for jp ([588e555](https://github.com/hideokamoto/eorzea-weather-ts/commit/588e555))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/hideokamoto/eorzea-weather-ts/compare/v1.0.0...v1.1.0) (2019-09-08)
 
