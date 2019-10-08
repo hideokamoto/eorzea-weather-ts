@@ -106,3 +106,12 @@ $ yarn run build
 // Rebuild docs
 $ yarn run doc
 ```
+
+## License
+
+MIT
+
+```
+FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.
+FINAL FANTASY XIV © 2010 - 2019 SQUARE ENIX CO., LTD. All Rights Reserved.
+```
